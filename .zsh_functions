@@ -1,0 +1,6 @@
+#!/bin/zsh
+
+history() {
+    builtin fc -l "${@:-1}"
+}
+

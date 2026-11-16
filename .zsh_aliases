@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # --- Pachage management (apt) ---
-alias uptodate='sudo apt update && sudo apt upgrade -y && sudo apt autoclean'
+alias uptodate='brew update && brew upgrade -y && brew cleanup'
 
 # --- Dotfiles ---
 alias ali='nvim ~/.zsh/.zsh_aliases'
