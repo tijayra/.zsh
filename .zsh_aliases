@@ -1,0 +1,49 @@
+#!/bin/zsh
+
+# --- Pachage management (apt) ---
+alias uptodate='sudo apt update && sudo apt upgrade -y && sudo apt autoclean'
+
+# --- Dotfiles ---
+alias ali='nvim ~/.zsh/.zsh_aliases'
+alias rcz='nvim ~/.zshrc'
+alias rel='source ~/.zsh/.zsh_aliases && source ~/.zsh/.zsh_functions'
+alias relz='source ~/.zshrc'
+alias fz='nvim ~/.zsh/.zsh_functions'
+
+# --- Listing & navigation ---
+alias ll='eza -alhF --group --icons --group-directories-first --sort=name --inode --color=auto'
+alias lls='eza -alhF --group --icons --group-directories-first --sort=size --color=auto --total-size'
+alias l='ll'
+alias cl='clear'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../../..'
+
+# --- Shortcuts & defaults ---
+alias grep='grep --color=auto'
+alias df='df -h'
+alias free='free -h'
+alias nv='nvim .'
+
+# --- System & network ---
+alias ports='ss -tulpn'
+alias myip='echo "IPv4: $(curl -4 -s --max-time 3 ifconfig.me || echo "n/a")" && echo "IPv6: $(curl -6 -s --max-time 3 ifconfig.me || echo "n/a")"'
+alias dmesg='sudo dmesg -T --color=always | less -R +G'
+alias dmesgfw='sudo dmesg -T --color=always | grep UFW | less -R +G'
+alias res='exec zsh'
+
+# --- Git ---
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit'
+alias gpull='git pull'
+alias gp='git push'
+alias gl='git log'
+
+# --- Docker ---
+alias dup='docker compose up -d'
+alias dstop='docker compose stop'
+alias ddown='docker compose down'
+alias drestart='docker compose restart'
+alias dfrestart='docker compose down && sleep 2 && docker compose up -d'
+alias dlogs='docker compose logs -f'
