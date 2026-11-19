@@ -44,11 +44,11 @@ unset SSH_ASKPASS
 [[ -f ~/.zsh/.zsh_functions ]] && source ~/.zsh/.zsh_functions
 # --- Plugins ---
 
-source /opt/homebrew/Cellar/zsh-autosuggestions/0.7.1/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ${HOMEBREW_PREFIX:-/opt/homebrew}/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # --- Startup banner ---
 [[ -z "$FASTFETCH_SHOWN" ]] && fastfetch && FASTFETCH_SHOWN=1
 
 # --- Prompt ---
 eval "$(starship init zsh)"
 
-source /opt/homebrew/Cellar/zsh-syntax-highlighting/0.8.0/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ${HOMEBREW_PREFIX:-/opt/homebrew}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
