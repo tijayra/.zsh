@@ -24,6 +24,7 @@ alias grep='grep --color=auto'
 alias df='df -h'
 alias free='free -h'
 alias nv='nvim .'
+alias sshconf='nvim ~/.ssh/config'
 
 # --- System & network ---
 alias ports='ss -tulpn'
